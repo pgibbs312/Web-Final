@@ -4,46 +4,59 @@
 .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr 2fr 1fr;
+    grid-template-rows: 200px 1fr 2fr 1fr;
     height: 100vh;
     grid-template-areas: "header"
                          "top_main"
                          "main"
                          "footer";
-    /* padding: 0;
-    margin: 0; */
+    padding: 0;
+    margin: 0;
 }
 h1, h2, p {
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
 }
 .header {
-    position: fixed;
-    top: 5%;
-    left: 50%;
     
+    position: fixed;
+    top: 2%;
+    left: 35%;
+    grid-area: header;
 }
 .top_main * {
-  box-sizing: border-box;
+    /* box-sizing: border-box; */
    grid-area: top_main;
-   /* height: 100px; */
+
     
 }
 .column {
     float: left;
-    width: 25%;
-    padding: 3px;
+    width: 20%;
+    /* padding: 1px; */
+    
 }
 .displayed {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     grid-area: main;
 
 }
-.footer {
+.column2 {
+    float: left;
+    width: 100%;
+}
+.footer * {
+    margin: 1px;
+    grid-area: footer;
+
+}
+label {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    grid-area: footer;
+}
+#effect{
+    align-content: center;
+}
+button {
+    align-content: center;
 }
